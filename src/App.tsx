@@ -11,6 +11,7 @@ import Vector4 from "./images/main/Vector4.svg";
 import Location from "./images/main/Location-Icon.svg";
 import Phone from "./images/main/phone-call.svg";
 import Mail from "./images/main/mail.svg";
+import VectorBig from "./images/main/VectorBig.svg";
 import 'swiper/css';
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper/modules";
@@ -62,9 +63,9 @@ function App() {
           <section className="main-section main-page">
             <div className="main-page__info">
               <div className="main-page__title">
-                <div className="main-page__main-title">
+                <h1 className="main-page__main-title">
                   <span>Dive</span> Into The Depths
-                </div>
+                </h1>
                 <h2 className="main-page__under-title">Of <span>Virtual Reality</span></h2>
               </div>
               <p className="main-page__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
@@ -89,14 +90,14 @@ function App() {
               navigation
               slidesPerView={3}
               breakpoints={{
-                320: {
-                  slidesPerView: 1,
+                919: {
+                  slidesPerView: 3,
                 },
-                620: {
+                694: {
                   slidesPerView: 2,
                 },
-                920: {
-                  slidesPerView: 3,
+                0: {
+                  slidesPerView: 1,
                 }
               }}
               onSlideChange={() => console.log('slide change')}
@@ -124,6 +125,18 @@ function App() {
                 </div>
               </div></SwiperSlide>
             </Swiper>
+          </section>
+          <section className="main-section introduce">
+            <div className="introduce__title">
+              <div className="introduce__main-text">INTRODUCTION</div>
+              <div className="introduce__second-text-arrow">
+                <div className="introduce__second-text">TO HYDRA VR</div>
+                <img src={VectorBig} alt="Arrow" className="introduce__icon" /></div>
+            </div>
+            <div className="introduce__text">Vitae sapien pellentesque habitant morbi tristique senectus et netus et. Feugiat
+              nibh sed pulvinar proin gravida hendrerit lectus. Mi sit amet mauris commodo
+              quis imperdiet massa tincidunt nunc. Viverra aliquet eget sit amet tellus. Ornare
+              lectus sit amet est placerat in. Lectus magna fringilla urna porttitor rhoncus vitae.</div>
           </section>
         </div>
       </main >

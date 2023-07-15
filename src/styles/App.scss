@@ -46,6 +46,20 @@ body {
     }
 }
 
+%buttonTemplate {
+    position: relative;
+    z-index: 5;
+    @extend %buttonColor;
+    color: #343045;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: normal;
+    border-radius: 40px;
+    background: linear-gradient(90deg, #8176AF 0%, #C0B7E8 100%);
+    width: 214px;
+    height: 48px;
+}
+
 ///////////////////////////Header/////////////////////////////
 
 .header {
@@ -347,17 +361,7 @@ body {
     }
 
     &__button {
-        position: relative;
-        z-index: 5;
-        @extend %buttonColor;
-        color: #343045;
-        font-size: 12px;
-        font-weight: 700;
-        line-height: normal;
-        border-radius: 40px;
-        background: linear-gradient(90deg, #8176AF 0%, #C0B7E8 100%);
-        width: 214px;
-        height: 48px;
+        @extend %buttonTemplate;
 
         @media (max-width: 767.98px) {
             justify-content: center;
@@ -477,12 +481,9 @@ body {
         align-items: center;
         column-gap: 10px;
 
-        @media (max-width: 919.98px) {
-            padding: 0px 30px;
-        }
-
         @media (max-width: 482.98px) {
             column-gap: 3px;
+            margin: 0 20px;
         }
     }
 
@@ -630,4 +631,99 @@ body {
         }
     }
 
+}
+
+
+///////////////////About//////////////////////
+
+
+
+
+
+.main-section {}
+
+.about {
+    margin-top: 90px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: 20px;
+
+    @media (max-width: 767.98px) {
+        flex-direction: column;
+        margin-top: 60px;
+    }
+
+    @media (max-width: 400.98px) {
+        margin-top: 10px;
+    }
+
+    &__img {
+        position: relative;
+    }
+
+    &__photo {
+        position: relative;
+        z-index: 5;
+        width: 100%;
+    }
+
+    &__info {
+        flex: 0 1 630px;
+
+        @media (max-width: 767.98px) {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            flex: 1 1 auto;
+        }
+    }
+
+    &__title {
+        font-size: clamp(26px, 4vw, 36px);
+        line-height: normal;
+
+        @media (max-width: 767.98px) {
+            margin-top: 20px;
+        }
+    }
+
+    &__subtitle {
+        font-size: clamp(26px, 4vw, 36px);
+        font-weight: 300;
+        line-height: normal;
+    }
+
+    &__text {
+        font-weight: 400;
+        line-height: normal;
+        margin-top: 42px;
+        margin-bottom: 28px;
+
+        @media (max-width: 1152.98px) {
+            margin-top: 22px;
+        }
+    }
+
+    &__button {
+        @extend %buttonTemplate;
+    }
+
+    &__vector {
+        position: absolute;
+
+        @media (max-width: 767.98px) {
+            display: none;
+        }
+    }
+}
+
+.vector07 {
+    top: 4%;
+    left: -10%;
+}
+
+.vector08 {
+    bottom: 10%;
+    left: -17%;
 }

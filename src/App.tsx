@@ -12,6 +12,9 @@ import Location from "./images/main/Location-Icon.svg";
 import Phone from "./images/main/phone-call.svg";
 import Mail from "./images/main/mail.svg";
 import VectorBig from "./images/main/VectorBig.svg";
+import Mask from "./images/main/Mask.svg";
+import Vector7 from "./images/main/Vector7.svg";
+import Vector8 from "./images/main/Vector8.svg";
 import 'swiper/css';
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper/modules";
@@ -103,27 +106,33 @@ function App() {
               onSlideChange={() => console.log('slide change')}
               onSwiper={(swiper) => console.log(swiper)}
             >
-              <SwiperSlide><div className="contacts__item">
-                <img src={Location} alt="Photo" className="contacts__icon" />
-                <div className="contacts__info">
-                  <div className="contacts__title">Pay Us a Visit</div>
-                  <div className="contacts__text">Union St, Seattle, WA 98101, United States</div>
+              <SwiperSlide>
+                <div className="contacts__item">
+                  <img src={Location} alt="Photo" className="contacts__icon" />
+                  <div className="contacts__info">
+                    <div className="contacts__title">Pay Us a Visit</div>
+                    <div className="contacts__text">Union St, Seattle, WA 98101, United States</div>
+                  </div>
                 </div>
-              </div></SwiperSlide>
-              <SwiperSlide><div className="contacts__item contacts__phone">
-                <img src={Phone} alt="Photo" className="contacts__icon" />
-                <div className="contacts__info">
-                  <div className="contacts__title">Give Us a Call</div>
-                  <div className="contacts__text">(110) 1111-1010</div>
+              </SwiperSlide>
+              <SwiperSlide>
+                <div className="contacts__item contacts__phone">
+                  <img src={Phone} alt="Photo" className="contacts__icon" />
+                  <div className="contacts__info">
+                    <div className="contacts__title">Give Us a Call</div>
+                    <div className="contacts__text">(110) 1111-1010</div>
+                  </div>
                 </div>
-              </div></SwiperSlide>
-              <SwiperSlide><div className="contacts__item">
-                <img src={Mail} alt="Photo" className="contacts__icon" />
-                <div className="contacts__info">
-                  <div className="contacts__title">Send Us a Message</div>
-                  <div className="contacts__text">Contact@HydraVTech.com</div>
+              </SwiperSlide>
+              <SwiperSlide>
+                <div className="contacts__item">
+                  <img src={Mail} alt="Photo" className="contacts__icon" />
+                  <div className="contacts__info">
+                    <div className="contacts__title">Send Us a Message</div>
+                    <div className="contacts__text">Contact@HydraVTech.com</div>
+                  </div>
                 </div>
-              </div></SwiperSlide>
+              </SwiperSlide>
             </Swiper>
           </section>
           <section className="main-section introduce">
@@ -131,6 +140,39 @@ function App() {
               <div className="introduce__main-text">INTRODUCTION</div>
               <div className="introduce__second-text-arrow">
                 <div className="introduce__second-text">TO HYDRA VR</div>
+                <img src={VectorBig} alt="Arrow" className="introduce__icon" /></div>
+            </div>
+            <div className="introduce__text">Vitae sapien pellentesque habitant morbi tristique senectus et netus et. Feugiat
+              nibh sed pulvinar proin gravida hendrerit lectus. Mi sit amet mauris commodo
+              quis imperdiet massa tincidunt nunc. Viverra aliquet eget sit amet tellus. Ornare
+              lectus sit amet est placerat in. Lectus magna fringilla urna porttitor rhoncus vitae.</div>
+          </section>
+          <section className="main-section about">
+            <div className="about__img">
+              <img src={Mask} alt="Photo" className="about__photo" />
+              <img src={Vector7} alt="Photo" className="about__vector vector07" />
+              <img src={Vector8} alt="Photo" className="about__vector vector08" />
+            </div>
+            <div className="about__info">
+              <div className="about__title">ABOUT</div>
+              <div className="about__subtitle">HYDRA VR</div>
+              <div className="about__text">Eget mi proin sed libero enim sed faucibus turpis. Nisl rhoncus mattis rhoncus
+                urna neque viverra justo. Vivamus at augue eget arcu dictum. Ultrices gravida
+                dictum fusce ut placerat orci. Aenean et tortor at risus viverra adipiscing at in.
+                Mattis aliquam faucibus purus in massa. Est placerat in egestas erat imperdiet
+                sed. Consequat semper viverra nam libero justo laoreet sit amet. Aliquam
+                etiam erat velit scelerisque in dictum non consectetur a. Laoreet sit amet
+                cursus sit amet. Vel eros donec ac odio tempor orci dapibus. Sem nulla pha
+                retra diam sit amet nisl suscipit adipiscing bibendum. Leo a diam sollicitudi
+                n tempor.</div>
+              <button className="about__button">LET’S GET IN TOUCH</button>
+            </div>
+          </section>
+          <section className="main-section introduce">
+            <div className="introduce__title">
+              <div className="introduce__main-text">WHY BUILD</div>
+              <div className="introduce__second-text-arrow">
+                <div className="introduce__second-text">WITH HYDRA?</div>
                 <img src={VectorBig} alt="Arrow" className="introduce__icon" /></div>
             </div>
             <div className="introduce__text">Vitae sapien pellentesque habitant morbi tristique senectus et netus et. Feugiat

@@ -15,6 +15,17 @@ import VectorBig from "./images/main/VectorBig.svg";
 import Mask from "./images/main/Mask.svg";
 import Vector7 from "./images/main/Vector7.svg";
 import Vector8 from "./images/main/Vector8.svg";
+import Card1 from "./images/main/Card1.png";
+import Card2 from "./images/main/Card2.png";
+import Card3 from "./images/main/Card3.png";
+import Card4 from "./images/main/Card4.png";
+import Vector12 from "./images/main/Vector12.svg";
+import Vector14 from "./images/main/Vector14.svg";
+import Tech1 from "./images/main/Hydra-Tech1.svg";
+import Tech2 from "./images/main/Hydra-Tech2.svg";
+import Tech3 from "./images/main/Hydra-Tech3.svg";
+import Tech4 from "./images/main/Hydra-Tech4.svg";
+import Vector15 from "./images/main/Vector15.svg";
 import 'swiper/css';
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper/modules";
@@ -103,8 +114,6 @@ function App() {
                   slidesPerView: 1,
                 }
               }}
-              onSlideChange={() => console.log('slide change')}
-              onSwiper={(swiper) => console.log(swiper)}
             >
               <SwiperSlide>
                 <div className="contacts__item">
@@ -179,6 +188,200 @@ function App() {
               nibh sed pulvinar proin gravida hendrerit lectus. Mi sit amet mauris commodo
               quis imperdiet massa tincidunt nunc. Viverra aliquet eget sit amet tellus. Ornare
               lectus sit amet est placerat in. Lectus magna fringilla urna porttitor rhoncus vitae.</div>
+          </section>
+          <section className="main-section cards">
+            <Swiper
+              modules={[Navigation]}
+              navigation
+              spaceBetween={5}
+              slidesPerView={4}
+              breakpoints={{
+                1012: {
+                  slidesPerView: 4,
+                },
+                779: {
+                  slidesPerView: 3,
+                }
+                ,
+                525: {
+                  slidesPerView: 2,
+                },
+                0: {
+                  slidesPerView: 1,
+                }
+              }}
+            >
+              <SwiperSlide>
+                <article className="cards__card card">
+                  <div className="card__img">
+                    <img src={Card1} alt="Photo" className="card__photo" />
+                  </div>
+                  <div className="card__title">SIMULATION</div>
+                  <img src={Vector12} alt="Arrow" className="card__icon" />
+                  <div className="card__text">Vitae sapien pellentesque habitant morbi
+                    nunc. Viverra aliquet  porttitor rhoncus
+                    libero justo laoreet sit amet vitae.</div>
+                  <button className="card__button">TRY IT NOW</button>
+                </article>
+              </SwiperSlide>
+              <SwiperSlide>
+                <article className="cards__card card">
+                  <div className="card__img">
+                    <img src={Card2} alt="Photo" className="card__photo" />
+                  </div>
+                  <div className="card__title">EDUCATION</div>
+                  <img src={Vector12} alt="Arrow" className="card__icon" />
+                  <div className="card__text">Vitae sapien pellentesque habitant morbi
+                    nunc. Viverra aliquet  porttitor rhoncus
+                    libero justo laoreet sit amet vitae.</div>
+                  <button className="card__button">TRY IT NOW</button>
+                </article>
+              </SwiperSlide>
+              <SwiperSlide>
+                <article className="cards__card card">
+                  <div className="card__img">
+                    <img src={Card3} alt="Photo" className="card__photo" />
+                  </div>
+                  <div className="card__title">SELF-CARE</div>
+                  <img src={Vector12} alt="Arrow" className="card__icon" />
+                  <div className="card__text">Vitae sapien pellentesque habitant morbi
+                    nunc. Viverra aliquet  porttitor rhoncus
+                    libero justo laoreet sit amet vitae.</div>
+                  <button className="card__button">TRY IT NOW</button>
+                </article>
+              </SwiperSlide>
+              <SwiperSlide>
+                <article className="cards__card card">
+                  <div className="card__img">
+                    <img src={Card4} alt="Photo" className="card__photo" />
+                  </div>
+                  <div className="card__title">OUTDOOR</div>
+                  <img src={Vector12} alt="Arrow" className="card__icon" />
+                  <div className="card__text">Vitae sapien pellentesque habitant morbi
+                    nunc. Viverra aliquet  porttitor rhoncus
+                    libero justo laoreet sit amet vitae.</div>
+                  <button className="card__button">TRY IT NOW</button>
+                </article>
+              </SwiperSlide>
+            </Swiper>
+            <img src={Vector14} alt="Photo" className="card__vector vector14" />
+          </section>
+          <section className="main-section propose">
+            <div className="propose__title">TECHNOLOGIES & HARDWARE</div>
+            <div className="propose__subtitle">USED BY HYDRA VR.</div>
+          </section>
+          <section className="main-section companies">
+            <Swiper
+              modules={[Navigation]}
+              navigation
+              slidesPerView={4}
+              breakpoints={{
+                1105: {
+                  slidesPerView: 4,
+                },
+                832: {
+                  slidesPerView: 3,
+                }
+                ,
+                525: {
+                  slidesPerView: 2,
+                },
+                0: {
+                  slidesPerView: 1,
+                }
+              }}
+            >
+              <SwiperSlide>
+                <img src={Tech1} alt="Photo" className="companies__photo" />
+              </SwiperSlide>
+              <SwiperSlide>
+                <img src={Tech2} alt="Photo" className="companies__photo" />
+              </SwiperSlide>
+              <SwiperSlide>
+                <img src={Tech3} alt="Photo" className="companies__photo" />
+              </SwiperSlide>
+              <SwiperSlide>
+                <img src={Tech4} alt="Photo" className="companies__photo" />
+              </SwiperSlide>
+            </Swiper>
+          </section>
+          <section className="main-section introduce low-margin">
+            <div className="introduce__title">
+              <div className="introduce__main-text">HOW WE BUILD</div>
+              <div className="introduce__second-text-arrow">
+                <div className="introduce__second-text">WITH HYDRA VR?</div>
+                <img src={VectorBig} alt="Arrow" className="introduce__icon" /></div>
+            </div>
+            <div className="introduce__text">Vitae sapien pellentesque habitant morbi tristique senectus et netus et. Feugiat
+              nibh sed pulvinar proin gravida hendrerit lectus. Mi sit amet mauris commodo
+              quis imperdiet massa tincidunt nunc. Viverra aliquet eget sit amet tellus. Ornare
+              lectus sit amet est placerat in. Lectus magna fringilla urna porttitor rhoncus vitae.</div>
+          </section>
+          <section className="main-section steps">
+            <Swiper
+              modules={[Navigation]}
+              navigation
+              slidesPerView={4}
+              breakpoints={{
+                1105: {
+                  slidesPerView: 4,
+                },
+                832: {
+                  slidesPerView: 3,
+                }
+                ,
+                525: {
+                  slidesPerView: 2,
+                },
+                0: {
+                  slidesPerView: 1,
+                }
+              }}
+            >
+              <SwiperSlide>
+                <div className="steps__step step">
+                  <div className="step__number">01</div>
+                  <div className="step__title">3D Conception & Design</div>
+                </div>
+              </SwiperSlide>
+              <SwiperSlide>
+                <div className="steps__step step">
+                  <div className="step__number">02</div>
+                  <div className="step__title">Interaction Design</div>
+                </div>
+              </SwiperSlide>
+              <SwiperSlide>
+                <div className="steps__step step">
+                  <div className="step__number">03</div>
+                  <div className="step__title">VR World User Testing</div>
+                </div>
+              </SwiperSlide>
+              <SwiperSlide>
+                <div className="steps__step step">
+                  <div className="step__number">04</div>
+                  <div className="step__title">Hydra VR Deploy</div>
+                </div>
+              </SwiperSlide>
+            </Swiper>
+            <img src={Vector15} alt="Arrow" className="steps__icon" />
+          </section>
+          <section className="main-section form-section">
+            <div className="form-section__title">JOIN HYDRA</div>
+            <div className="form-section__subtitle">Let’s Build Your VR Experience</div>
+            <form action="" className="form-section__form form">
+              <div className="form__half">
+                <input type="text" className="form__input" placeholder="First Name" />
+                <input type="text" className="form__input" placeholder="Email" />
+              </div>
+              <div className="form__half">
+                <input type="text" className="form__input" placeholder="Last Name" />
+                <input type="text" className="form__input" placeholder="Phone Number" />
+              </div>
+              <input type="text" className="form__input" placeholder="Subject" />
+              <textarea className="form__textarea" placeholder="Tell Us Something..." />
+
+              <button className="form__button">SEND TO HYDRA</button>
+            </form>
           </section>
         </div>
       </main >

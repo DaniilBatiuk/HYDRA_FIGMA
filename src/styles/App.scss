@@ -60,6 +60,21 @@ body {
     height: 48px;
 }
 
+
+@mixin arrayButton($url, $rotate) {
+    width: 44px;
+    height: 44px;
+    content: url($url);
+    border-radius: 50%;
+    box-shadow: 0px 0px 0px 10px rgba(14, 14, 14, 0.32);
+    transform: rotate($rotate);
+    background: linear-gradient(268deg, #C0B7E8 0%, #8176AF 100%);
+
+    &:hover {
+        background: linear-gradient(90deg, #C0B7E8 0%, #8176AF 100%);
+    }
+}
+
 ///////////////////////////Header/////////////////////////////
 
 .header {
@@ -726,4 +741,426 @@ body {
 .vector08 {
     bottom: 10%;
     left: -17%;
+}
+
+
+
+
+////////////////////////Cards///////////////////////////////////
+
+
+
+
+.main-section {}
+
+.cards {
+    position: relative;
+    margin-top: 100px;
+
+    @media (max-width: 1011.98px) {
+        margin-top: 60px;
+    }
+
+    @media (max-width: 400.98px) {
+        margin-top: 20px;
+    }
+
+    & .swiper {
+        & .swiper-button-prev {
+            @include arrayButton("../images/main/chevron-small-down.svg", 0deg);
+        }
+
+        & .swiper-button-next {
+            @include arrayButton("../images/main/chevron-small-down.svg", 180deg);
+        }
+    }
+}
+
+.card {
+    border-radius: 40px;
+    margin: 0 auto;
+    background: radial-gradient(50.00% 50.00% at 50.00% 50.00%, #433D60 0%, #211E2E 100%);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 32px;
+    padding-bottom: 40px;
+    padding-inline: 7px;
+    max-width: 310px;
+
+    &__title {
+        font-size: 24px;
+        line-height: normal;
+        margin-top: 21px;
+        margin-bottom: 17px;
+    }
+
+    &__text {
+        font-size: 12px;
+        font-weight: 400;
+        line-height: normal;
+        margin-top: 21px;
+        max-width: 250px;
+        margin-bottom: 35px;
+    }
+
+    &__button {
+        width: 155px;
+        height: 48px;
+        border-radius: 40px;
+        font-size: 12px;
+        line-height: normal;
+        @extend %buttonColor;
+        color: #343045;
+        font-size: 12px;
+        font-weight: 700;
+        line-height: normal;
+    }
+
+    &__img {
+        border-radius: 50%;
+        box-shadow: 0px 0px 0px 13px rgba(14, 14, 14, 0.32);
+    }
+
+    &__vector {
+        position: absolute;
+    }
+}
+
+.vector14 {
+    top: 0;
+    left: -7%;
+
+    @media (max-width: 767.98px) {
+        display: none;
+    }
+}
+
+
+
+/////////////////////////propose/////////////////////
+
+
+
+.main-section {}
+
+.propose {
+
+    background-image: url("../images//main/MaskGroup.png");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 114px;
+    position: relative;
+
+    @media (max-width: 767.98px) {
+        margin-top: 50px;
+    }
+
+    &::after {
+        position: absolute;
+        bottom: -5%;
+        left: calc(50% - 22px);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-top: 3px;
+        cursor: pointer;
+        @include arrayButton("../images/main/chevron-small-down.svg", 270deg);
+
+        @media (max-width: 767.98px) {
+            display: none;
+        }
+    }
+
+    &__title {
+        font-size: 36px;
+        font-size: clamp(16px, 4vw, 36px);
+        line-height: normal;
+        margin-top: min(10%, 108px);
+        margin-bottom: 14px;
+    }
+
+    &__subtitle {
+        font-size: 36px;
+        font-size: clamp(24px, 4vw, 36px);
+        font-weight: 300;
+        line-height: normal;
+        margin-bottom: min(10%, 96px);
+    }
+
+}
+
+
+
+////////////////////////companies//////////////////////
+
+
+
+
+
+.main-section {}
+
+.companies {
+    margin-top: 30px;
+
+    & .swiper {
+        & .swiper-wrapper {
+            display: flex;
+            align-items: center;
+
+            & .swiper-slide {
+                display: flex;
+                justify-content: center;
+            }
+        }
+
+        & .swiper-button-prev {
+            @include arrayButton("../images/main/chevron-small-down.svg", 0deg);
+        }
+
+        & .swiper-button-next {
+            @include arrayButton("../images/main/chevron-small-down.svg", 180deg);
+        }
+
+    }
+
+    &__photo {
+        @media(max-width:1105.98px) {
+            width: 60%;
+        }
+    }
+}
+
+
+
+.low-margin {
+    margin-top: 50px;
+}
+
+
+
+
+
+
+
+/////////////////////////////step//////////////////////////
+
+
+
+
+
+
+.main-section {}
+
+.steps {
+    margin-top: 90px;
+
+    @media (max-width: 767.98px) {
+        margin-top: 47px;
+    }
+
+    @media (max-width: 400.98px) {
+        margin-top: 17px;
+    }
+
+    position: relative;
+
+    & .swiper {
+        & .swiper-wrapper {
+            display: flex;
+            align-items: center;
+
+            & .swiper-slide {
+                display: flex;
+                justify-content: center;
+            }
+        }
+
+        & .swiper-button-prev {
+            position: absolute;
+            top: 88%;
+
+            @include arrayButton("../images/main/chevron-small-down.svg", 0deg);
+        }
+
+        & .swiper-button-next {
+            position: absolute;
+            z-index: 5;
+            top: 88%;
+
+            @include arrayButton("../images/main/chevron-small-down.svg", 180deg);
+        }
+
+    }
+
+    &__step {}
+
+    &__icon {
+        position: absolute;
+        top: 0;
+        left: -6%;
+
+        @media (max-width:767.98px) {
+            display: none;
+        }
+    }
+}
+
+.step {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 30px;
+    max-width: 230px;
+
+    @media (max-width:767.98px) {
+        text-align: center;
+    }
+
+    &__number {
+        color: #343045;
+        font-size: 64px;
+        font-weight: 700;
+        line-height: normal;
+        padding: 41px 45px;
+        border-radius: 50%;
+        background: linear-gradient(251deg, #C0B7E8 0%, #8176AF 100%);
+        box-shadow: 0px 0px 0px 19px rgba(14, 14, 14, 0.32);
+    }
+
+    &__title {
+        font-size: 24px;
+        display: flex;
+        position: relative;
+        z-index: 5;
+        margin-top: 44px;
+        padding-left: 43px;
+
+        @media (max-width:1105.98px) {
+            padding-inline: 20px;
+        }
+
+        @media (max-width:767.98px) {
+            padding-inline: 20px;
+        }
+
+        &::before {
+            position: absolute;
+            content: url("../images/main/arrow-smaller-right.svg");
+            top: -30%;
+            left: -10%;
+            z-index: 5;
+
+            @media (max-width:1105.98px) {
+                display: none;
+            }
+        }
+    }
+
+}
+
+
+
+
+
+
+
+
+/////////////////////////form///////////////////
+
+
+
+
+
+
+.main-section {}
+
+.form-section {
+    margin-top: 100px;
+    border-radius: 100px;
+    background: radial-gradient(50% 50.00% at 50% 50.00%, #403A5F 0%, #211E2E 100%);
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    height: 1008px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    &__title {
+        font-size: 36px;
+        line-height: normal;
+        margin-top: 90px;
+        position: relative;
+        margin-bottom: 51px;
+        &::after {
+            position: absolute;
+            content: "";
+            height: 1px;
+            width: 100%;
+            background: linear-gradient(90deg, #343045, #C0B7E8 35%, #8176AF 69%, #343045);
+            bottom: -30%;
+            left: (50% - 100% / 2);
+        }
+    }
+
+    &__subtitle {
+        font-size: 36px;
+        font-weight: 300;
+        line-height: normal;
+        margin-bottom: 65px;
+    }
+
+    &__form {
+        max-width: 1058px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        row-gap: 33px;
+    }
+}
+
+.form {
+
+    &__half {
+        display: flex;
+        column-gap: 10px;
+
+        & .form__input {
+            flex: 1 1 50%;
+        }
+    }
+
+    &__input {
+        background-color: inherit;
+        border-radius: 40px;
+        border: 2px solid #FFF;
+        color: #FFF;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: normal;
+        height: 60px;
+        padding: 27px 42px;
+    }
+
+    &__textarea {
+        background-color: inherit;
+        border-radius: 40px;
+        border: 2px solid #FFF;
+        color: #FFF;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: normal;
+        height: 210px;
+        padding: 27px 42px;
+    }
+
+    &__button {
+        @extend %buttonTemplate;
+        margin: 0 auto;
+    }
 }

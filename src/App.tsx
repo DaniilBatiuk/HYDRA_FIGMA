@@ -380,7 +380,7 @@ function App() {
               <input type="text" className="form__input" placeholder="Subject" />
               <textarea className="form__textarea" placeholder="Tell Us Something..." />
 
-              <button className="form__button">SEND TO HYDRA</button>
+              <button type="submit" className="form__button">SEND TO HYDRA</button>
             </form>
           </section>
         </div>

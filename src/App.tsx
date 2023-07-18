@@ -26,6 +26,16 @@ import Tech2 from "./images/main/Hydra-Tech2.svg";
 import Tech3 from "./images/main/Hydra-Tech3.svg";
 import Tech4 from "./images/main/Hydra-Tech4.svg";
 import Vector15 from "./images/main/Vector15.svg";
+import Facebook from "./images/footer/facebook.svg";
+import Instagram from "./images/footer/instagram.svg";
+import Linkedin from "./images/footer/linkedin.svg";
+import Pinterest from "./images/footer/pinterest.svg";
+import Twitter from "./images/footer/twitter.svg";
+import Youtube from "./images/footer/youtube.svg";
+import Vector19 from "./images/footer/Vector19.svg";
+import Vector19_2 from "./images/footer/Vector19-2.svg";
+import Vector18 from "./images/footer/Vector18.svg";
+import Vector18_2 from "./images/footer/Vector18-2.svg";
 import 'swiper/css';
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper/modules";
@@ -385,7 +395,47 @@ function App() {
           </section>
         </div>
       </main >
-      <footer className="footer">footer</footer>
+      <footer className="footer">
+        <div className="footer__container">
+          <div className="footer__head">
+            <img src={Logo} alt="Logo" className="footer__logo" />
+            <ul className="footer__list">
+              <li className="footer__item"> <a href="/" className="footer__link">ABOUT</a></li>
+              <li className="footer__item"><a href="/" className="footer__link"> SERVICES</a></li>
+              <li className="footer__item"><a href="/" className="footer__link">TECHNOLOGIES</a></li>
+              <li className="footer__item"><a href="/" className="footer__link">HOW TO</a></li>
+              <li className="footer__item"><a href="/" className="footer__link">JOIN HYDRA</a></li>
+            </ul>
+            <ul className="footer__list footer__list-2">
+              <li className="footer__item"><a href="/" className="footer__link">F.A.Q</a></li>
+              <li className="footer__item"><a href="/" className="footer__link">SITEMAP</a></li>
+              <li className="footer__item"><a href="/" className="footer__link">CONDITIONS</a></li>
+              <li className="footer__item"><a href="/" className="footer__link">LICENSES</a></li>
+            </ul>
+            <div className="footer__contacts">
+              <div className="footer__text">SOCIALIZE WITH HYDRA</div>
+              <ul className="footer__list-icon">
+                <li className="footer__item"><a href="/" className="footer__link"><img src={Facebook} alt="Icon" className="footer__icon" /></a></li>
+                <li className="footer__item"><a href="/" className="footer__link"><img src={Instagram} alt="Icon" className="footer__icon" /></a></li>
+                <li className="footer__item"><a href="/" className="footer__link"><img src={Linkedin} alt="Icon" className="footer__icon" /></a></li>
+                <li className="footer__item"><a href="/" className="footer__link"><img src={Pinterest} alt="Icon" className="footer__icon" /></a></li>
+                <li className="footer__item"><a href="/" className="footer__link"><img src={Twitter} alt="Icon" className="footer__icon" /></a></li>
+                <li className="footer__item"><a href="/" className="footer__link"><img src={Youtube} alt="Icon" className="footer__icon" /></a></li>
+              </ul>
+              <button className="footer__button">BUILD YOUR WORLD</button>
+            </div>
+            <img src={Vector19} alt="Photo" className="footer__vector vector19" />
+            <img src={Vector19_2} alt="Photo" className="footer__vector vector19_2" />
+            <img src={Vector18} alt="Photo" className="footer__vector vector18" />
+            <img src={Vector18_2} alt="Photo" className="footer__vector vector18_2" />
+          </div>
+          <div className="footer__under">
+            <div className="footer__under-text">2023 © HYDRA LANDING PAGE</div>
+            <div className="footer__under-text">BY ZINE. E. FALOUTI</div>
+            <div className="footer__under-text">ALL RIGHTS RESERVED </div>
+          </div>
+        </div>
+      </footer>
     </div >
   )
 }

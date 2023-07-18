@@ -1092,6 +1092,12 @@ body {
     flex-direction: column;
     padding-inline: 15px;
     padding-bottom: 50px;
+    position: relative;
+    z-index: 5;
+
+    @media (max-width: 767.98px) {
+        margin-top: 70px;
+    }
 
     @media (max-width:658.98px) {
         border-radius: 40px;
@@ -1176,11 +1182,216 @@ body {
         line-height: normal;
         height: 210px;
         padding: min(5%, 27px) min(7%, 42px);
+        resize: none;
     }
 
     &__button {
         @extend %buttonTemplate;
         margin: 0 auto;
         margin-top: min(10%, 40px);
+    }
+}
+
+
+
+
+
+
+
+/////////////////////footer//////////////////
+
+
+
+
+
+.footer {
+    margin-top: 100px;
+
+    @media (max-width: 767.98px) {
+        margin-top: 60px;
+    }
+
+    &__container {}
+
+    &__head {
+        display: flex;
+        justify-content: space-between;
+        position: relative;
+        margin-bottom: 90px;
+
+        &::after {
+            position: absolute;
+            content: "";
+            height: 1px;
+            width: 100%;
+            background: linear-gradient(90deg, #343045, #C0B7E8 35%, #8176AF 69%, #343045);
+            bottom: -25%;
+            left: 0;
+
+            @media (max-width:577.98px) {
+                bottom: -15%;
+            }
+        }
+
+        @media (max-width:577.98px) {
+            flex-direction: column;
+            align-items: center;
+        }
+
+    }
+
+    &__logo {
+        width: 185px;
+        height: 185px;
+        position: relative;
+        z-index: 5;
+    }
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        row-gap: 20px;
+        position: relative;
+
+        &::after {
+            position: absolute;
+            content: url("../images//footer/Vector20.svg");
+            bottom: 0;
+            left: -5vw;
+        }
+
+        @media (max-width:774.98px) {
+            display: none;
+        }
+    }
+
+    &__list-2 {
+
+        @media (max-width:929.98px) {
+            display: none;
+        }
+    }
+
+    &__list-icon {
+        display: flex;
+        column-gap: 20px;
+
+    }
+
+    &__item {
+        @extend %colorHover;
+    }
+
+    &__link {}
+
+    &__contacts {
+        position: relative;
+
+        &::after {
+            position: absolute;
+            content: url("../images//footer/Vector20.svg");
+            bottom: 0;
+            left: -5vw;
+
+            @media (max-width:774.98px) {
+                left: calc(110% - 60vw);
+            }
+
+            @media (max-width:577.98px) {
+                display: none;
+            }
+        }
+
+        @media (max-width:577.98px) {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+
+    &__text {
+        margin-bottom: 39px;
+
+        @media (max-width:577.98px) {
+            margin-top: 40px;
+        }
+    }
+
+    &__icon {}
+
+    &__button {
+        @extend %buttonTemplate;
+        margin-top: 40px;
+    }
+
+    &__under {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 60px;
+
+        @media (max-width:709.98px) {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            row-gap: 20px;
+        }
+    }
+
+    &__under-text {
+
+        &:not(:last-child)::after {
+            content: " - ";
+            margin-left: 5px;
+            margin-right: 5px;
+
+            @media (max-width:709.98px) {
+                display: none;
+            }
+        }
+
+    }
+
+    &__vector {
+        position: absolute;
+    }
+}
+
+.vector19 {
+    bottom: 75%;
+    left: -7%;
+
+    @media (max-width:410.98px) {
+        display: none;
+    }
+}
+
+.vector19_2 {
+    display: none;
+
+    @media (max-width:410.98px) {
+        display: block;
+        top: -23%;
+        left: -5%;
+    }
+}
+
+
+.vector18 {
+    top: -30%;
+    left: -5%;
+
+    @media (max-width:410.98px) {
+        display: none;
+    }
+}
+
+.vector18_2 {
+    display: none;
+
+    @media (max-width:410.98px) {
+        display: block;
+        top: 10%;
+        left: -5%;
     }
 }

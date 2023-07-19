@@ -156,7 +156,7 @@ function App() {
           </section>
           <section className="main-section introduce">
             <div className="introduce__title">
-              <div className="introduce__main-text">INTRODUCTION</div>
+              <h2 className="introduce__main-text">INTRODUCTION</h2>
               <div className="introduce__second-text-arrow">
                 <div className="introduce__second-text">TO HYDRA VR</div>
                 <img src={VectorBig} alt="Arrow" className="introduce__icon" /></div>
@@ -189,7 +189,7 @@ function App() {
           </section>
           <section className="main-section introduce">
             <div className="introduce__title">
-              <div className="introduce__main-text">WHY BUILD</div>
+              <h2 className="introduce__main-text">WHY BUILD</h2>
               <div className="introduce__second-text-arrow">
                 <div className="introduce__second-text">WITH HYDRA?</div>
                 <img src={VectorBig} alt="Arrow" className="introduce__icon" /></div>
@@ -317,7 +317,7 @@ function App() {
           </section>
           <section className="main-section introduce low-margin">
             <div className="introduce__title">
-              <div className="introduce__main-text">HOW WE BUILD</div>
+              <h2 className="introduce__main-text">HOW WE BUILD</h2>
               <div className="introduce__second-text-arrow">
                 <div className="introduce__second-text">WITH HYDRA VR?</div>
                 <img src={VectorBig} alt="Arrow" className="introduce__icon" /></div>
@@ -376,7 +376,7 @@ function App() {
             <img src={Vector15} alt="Arrow" className="steps__icon" />
           </section>
           <section className="main-section form-section">
-            <div className="form-section__title">JOIN HYDRA</div>
+            <h2 className="form-section__title">JOIN HYDRA</h2>
             <div className="form-section__subtitle">Let’s Build Your VR Experience</div>
             <form action="" className="form-section__form form">
               <div className="form__half">
@@ -414,14 +414,14 @@ function App() {
             </ul>
             <div className="footer__contacts">
               <div className="footer__text">SOCIALIZE WITH HYDRA</div>
-              <ul className="footer__list-icon">
+              <address className="footer__list-icon">
                 <li className="footer__item"><a href="/" className="footer__link"><img src={Facebook} alt="Icon" className="footer__icon" /></a></li>
                 <li className="footer__item"><a href="/" className="footer__link"><img src={Instagram} alt="Icon" className="footer__icon" /></a></li>
                 <li className="footer__item"><a href="/" className="footer__link"><img src={Linkedin} alt="Icon" className="footer__icon" /></a></li>
                 <li className="footer__item"><a href="/" className="footer__link"><img src={Pinterest} alt="Icon" className="footer__icon" /></a></li>
                 <li className="footer__item"><a href="/" className="footer__link"><img src={Twitter} alt="Icon" className="footer__icon" /></a></li>
                 <li className="footer__item"><a href="/" className="footer__link"><img src={Youtube} alt="Icon" className="footer__icon" /></a></li>
-              </ul>
+              </address>
               <button className="footer__button">BUILD YOUR WORLD</button>
             </div>
             <img src={Vector19} alt="Photo" className="footer__vector vector19" />
